@@ -1,0 +1,8 @@
+<h1 class="page-header">Things Happening</h1>
+<% @items.each do |item| %>
+
+<strong><%=  item.product %></strong>
+<div><%= image_tag(item.avatar.url(:thumb)) %></div>
+
+	
+<% end %>

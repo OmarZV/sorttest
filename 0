@@ -1,0 +1,2 @@
+      invoke  active_record
+      create    db/migrate/20161210214041_add_likecounts_to_item.rb

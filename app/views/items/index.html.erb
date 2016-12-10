@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<div class="row">
+<div class="col-md-3"><h1 class="page-header">Listing Items</h1></div><br><br><div class="col-md-9"><%= link_to 'New Item', new_item_path, class: "btn btn-default" %></div>
+</div>
+<% @items.each do |item| %>
+	<h3><%= link_to item.product, item %></h3>
+	<div><%= image_tag(item.avatar.url(:medium)) %></div>
+	<div><%= item.amount %></div>	
+	<p id="item_<%= item.id %>_likes"><%= render partial: "likes", locals: {item: item} %>	
+	<hr />
+	<% end %>
