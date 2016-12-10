@@ -3,8 +3,8 @@ before_action :authenticate_user!
 before_action :set_user, only: [:show, :edit, :update, :destroy]
 	
 	def index
-	@items = Item.all	
-	Items.order('likes_count')
+	@items = Item.order('likes_count DESC')
+	
 	end
 
 	def show
