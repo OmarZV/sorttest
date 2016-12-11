@@ -1,10 +1,36 @@
 <h1 class="page-header">Things Happening</h1>
-<% @items.each do |item| %>
+
+<ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#trending">Trending</a></li>
+    <li><a data-toggle="tab" href="#westoros">Westoros</a></li>
+    <li><a data-toggle="tab" href="#essos">Essos</a></li>
+    <li><a data-toggle="tab" href="#wall">Beyond the Wall</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="trending" class="tab-pane fade in active">
+      <h3>Trending</h3>   
+      <% @items.each do |item| %>
 
 <strong><%=  item.product %></strong>
 <div><%= image_tag(item.avatar.url(:thumb)) %></div>
 <span class="glyphicon glyphicon-fire"></span>&nbsp&nbsp&nbsp&nbsp<%= item.likes_count %>&nbsp&nbsp<i class="fa fa-thumbs-o-up fa-lg" aria-hidden="true"></i><br><br>
-
-
-	
 <% end %>
+    </div>
+    
+    <div id="westoros" class="tab-pane fade">
+      <h3>Westeros</h3>
+      <p class="item" data-behavior="forum_thread-items"></p>
+    </div>
+    <div id="essos" class="tab-pane fade">
+      <h3>Essos</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+    </div>
+    <div id="wall" class="tab-pane fade">
+      <h3>Beyond the Wall</h3>
+      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    </div>
+  </div>
+</div>     
+ 
+ 
