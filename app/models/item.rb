@@ -1,5 +1,7 @@
 class Item < ApplicationRecord
 	has_many :likes, :counter_cache => true
+	has_many :commits, :counter_cache => true
+	
 	
 	
 	has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"

@@ -7,6 +7,7 @@
 	<h3><%= link_to item.product, item %></h3>
 	<div><%= image_tag(item.avatar.url(:medium)) %></div>
 	<div><%= item.amount %></div>	
-	<p id="item_<%= item.id %>_likes"><%= render partial: "likes", locals: {item: item} %>	
+	<p id="item_<%= item.id %>_likes"><%= render partial: "likes", locals: {item: item} %>
+	<p id="item_<%= item.id %>_commits"><%= render partial: "commits", locals: {item: item} %>	
 	<hr />
 	<% end %>

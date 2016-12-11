@@ -4,6 +4,7 @@ before_action :set_user, only: [:show, :edit, :update, :destroy]
 	
 	def index
 	@items = Item.order('likes_count DESC')
+	@fires = Item.order('commits_count DESC')
 	
 	end
 
