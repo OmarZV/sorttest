@@ -3,6 +3,8 @@
 
 <strong><%=  item.product %></strong>
 <div><%= image_tag(item.avatar.url(:thumb)) %></div>
+<span class="glyphicon glyphicon-fire"></span>&nbsp&nbsp&nbsp&nbsp<%= item.likes_count %>&nbsp&nbsp<i class="fa fa-thumbs-o-up fa-lg" aria-hidden="true"></i><br><br>
+
 
 	
 <% end %>
