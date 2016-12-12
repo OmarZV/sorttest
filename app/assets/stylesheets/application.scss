@@ -30,8 +30,28 @@
     text-align: center;
     img { width: 100% }
 }
+#round-image-50 {
+    background-color: white;
+    border: 1px solid #d9d9d9;
+    border-radius: 25px;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    text-align: center;
+    img { width: 100% }
+}
 .fa-thumbs-o-up:hover{
-color: #09c529;
+color: #26d226;
+
+
+}
+a .fa-thumbs-o-up {
+color: #66ba66;
+}
+.fa-thumbs-o-up{
+color: #66ba66;
 
 
 }
@@ -49,4 +69,7 @@ a {background-color:transparent !important;}
   background: white;
   cursor: inherit;
   display: block;
+}
+.css-style {
+border-radius: 5px;
 }
