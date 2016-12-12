@@ -30,3 +30,23 @@
     text-align: center;
     img { width: 100% }
 }
+.fa-thumbs-o-up:hover{
+color: #09c529;
+
+
+}
+a {background-color:transparent !important;}
+
+.btn-file input[type=file] {
+  position: absolute;
+  
+  
+  font-size: 100px;
+  text-align: right;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  outline: none;
+  background: white;
+  cursor: inherit;
+  display: block;
+}

@@ -1,8 +1,8 @@
 <h1 class="page-header">Things Happening</h1>
 
 <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#trending">Trending</a></li>
-    <li><a data-toggle="tab" href="#fire">Firing Up</a></li>
+    <li class="active"><a data-toggle="tab" href="#trending"><i class="fa fa-line-chart" aria-hidden="true"></i>&nbspTrending</a></li>
+    <li><a data-toggle="tab" href="#fire">Firing Up&nbsp<span class="glyphicon glyphicon-fire"></span></a></li>
     <li><a data-toggle="tab" href="#essos">Essos</a></li>
     <li><a data-toggle="tab" href="#wall">Beyond the Wall</a></li>
   </ul>
@@ -19,7 +19,7 @@
     </div>
     
     <div id="fire" class="tab-pane fade">
-      <h3>Firing Up</h3>
+      <h3>Firing Up&nbsp<span class="glyphicon glyphicon-fire" style="color:red"></span></h3>
       <% @fires.each do |item| %>
 
 <strong><%=  item.product %></strong>
