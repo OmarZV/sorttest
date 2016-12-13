@@ -8,7 +8,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body style="background-color: #f5f8fa;">
   <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -40,7 +40,7 @@
             
             
           </ul>
-          &nbsp<button type="button" class="btn btn-primary" id="camera0"><%= link_to '<i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> New Item'.html_safe, new_item_path, class: "camera" %></button>        
+          &nbsp<button type="button" class="btn btn-primary navbar-btn"><%= link_to '<i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> New Item'.html_safe, new_item_path, class: "camera" %></button>        
 
             <% else %>
             <li><%= link_to 'Login/SignUp', new_user_session_path %></li>

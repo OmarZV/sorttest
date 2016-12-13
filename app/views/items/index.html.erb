@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 <div class="row">
-<div class="col-md-3">
+<div class="col-md-4">
 <% if current_user %>
 <%= image_tag current_user.avatar, width: 70, class: "css-style"  %>
 <br>
@@ -9,33 +9,33 @@
 <%= link_to 'Login/SignUp', new_user_session_path %>
 <% end %>
 </div>
-<div class="col-md-7">
+<div class="col-md-4" style="background-color:#fff;">
 <div class="row">
-<div class="col-md-3"><h1 class="page-header">Listing Items</h1></div><br><br><div class="col-md-9"><button type="button" class="btn btn-primary"><%= link_to '<i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Add An Item'.html_safe, new_item_path, class: "pen" %></button></div>
+<div class="col-md-5"><h1 class="page-header">Listing Items</h1></div><br><br><div class="col-md-7"><button type="button" class="btn btn-primary"><%= link_to '<i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Add An Item'.html_safe, new_item_path, class: "pen" %></button></div>
 </div>
 <% @items.each do |item| %>
 	<div class="row">
-	<div class="col-md-2"><%= image_tag item.user.avatar, width: 38, class: "css-style" %>&nbsp<strong><%= item.user.username %></strong></div>
-	<div class="col-md-2" style="font-size:14px;"></div>
-	<div class="col-md-8"></div>
+	<div class="col-md-5"><%= image_tag item.user.avatar, width: 38, class: "css-style" %>&nbsp<strong><%= item.user.username %></strong></div>
+	<div class="col-md-6" style="font-size:14px;"></div>
+	<div class="col-md-1"></div>
 	</div>
 	<div class="row">
-	<div class="col-md-2" style="font-size:22px; font-family:circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;"><%= link_to item.product, item %></div>
-	<div class="col-md-2" style="font-size:22px; font-family:circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;">$<%= item.amount %></div>		
-	<div class="col-md-8"></div>	
+	<div class="col-md-5" style="font-size:22px; font-family:circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;"><%= link_to item.product, item %></div>
+	<div class="col-md-6" style="font-size:22px; font-family:circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;">$<%= item.amount %></div>		
+	<div class="col-md-1"></div>	
 	</div>
 	<div><%= image_tag(item.avatar.url(:medium)) %></div>
 	<div class="row">
-  <div class="col-md-2"><%= item.commits_count %><%= render partial: "commits", locals: {item: item} %></div>
-  <div class="col-md-2"><%= item.likes_count %><%= render partial: "likes", locals: {item: item} %></div>  
-	<div class="col-md-8"></div>
+  <div class="col-md-5"><%= item.commits_count %><%= render partial: "commits", locals: {item: item} %></div>
+  <div class="col-md-6"><span class="pull-right"><%= item.likes_count %><%= render partial: "likes", locals: {item: item} %></span></div>  
+	<div class="col-md-1"></div>
 </div>
 
 	
 	<hr />
 	<% end %>
 	</div>
-	<div class="col-md-2">
+	<div class="col-md-4">
 Egypt
 </div>
 </div>
