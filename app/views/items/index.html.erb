@@ -26,9 +26,9 @@
 	</div>
 	<div><%= image_tag(item.avatar.url(:medium)) %></div>
 	<div class="row">
-  <div class="col-md-5"><%= item.commits_count %><%= render partial: "commits", locals: {item: item} %></div>
-  <div class="col-md-6"><span class="pull-right"><%= item.likes_count %><%= render partial: "likes", locals: {item: item} %></span></div>  
-	<div class="col-md-1"></div>
+  <div class="col-md-3"><%= item.watches_count %><%= render partial: "watches", locals: {item: item} %></div>
+  <div class="col-md-3"><%= item.commits_count %><%= render partial: "commits", locals: {item: item} %></div>
+  <div class="col-md-6"><span class="pull-right"><%= item.likes_count %><%= render partial: "likes", locals: {item: item} %></span></div>  	
 </div>
 
 	

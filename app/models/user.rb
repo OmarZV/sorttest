@@ -7,6 +7,8 @@ class User < ApplicationRecord
 
 	has_many :likes
 	has_many :commits
+	has_many :favorites
+	has_many :watches
 	has_many :items
 
 	has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
@@ -27,6 +29,14 @@ class User < ApplicationRecord
 	
 	def commits?(post)
 		post.commits.where(user_id: id).any?
+	end
+	
+	def favorites?(post)
+		post.favorites.where(user_id: id).any?
+	end
+	
+	def watches?(post)
+		post.watches.where(user_id: id).any?
 	end
 	
 

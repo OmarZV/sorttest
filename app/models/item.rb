@@ -1,6 +1,8 @@
 class Item < ApplicationRecord
 	has_many :likes, :counter_cache => true
 	has_many :commits, :counter_cache => true
+	has_many :favorites, :counter_cache => true
+	has_many :watches, :counter_cache => true
 	belongs_to :user
 	
 	
